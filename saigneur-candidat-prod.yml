@@ -32,7 +32,7 @@ eureka:
 #    preferIpAddress: true
 #    lease-renewal-interval-in-seconds: 30
   client:
-    service-url:
+    serviceUrl:
       defaultZone: http://78.138.45.243:9102/eureka/
 
 # ==================================================
