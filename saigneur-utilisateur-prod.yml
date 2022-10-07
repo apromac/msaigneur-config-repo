@@ -30,7 +30,7 @@ eureka:
     preferIpAddress: true
     lease-renewal-interval-in-seconds: 30
   client:
-    serviceUrl:
+    service-url:
       defaultZone: http://${eureka.instance.hostname}:${eureka.instance.port}/eureka/
 
 # ==================================================
