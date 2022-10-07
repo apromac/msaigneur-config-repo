@@ -8,13 +8,13 @@ server:
 # SPRING
 # ==================================================
 spring:
+  mvc:
+    pathmatch:
+      matching-strategy: ANT_PATH_MATCHER
   cloud:
     config:
       import-check:
         enabled: false
-  mvc:
-    pathmatch:
-      matching-strategy: ANT_PATH_MATCHER
 
 # ==================================================
 # EUREKA
