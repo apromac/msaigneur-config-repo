@@ -3,11 +3,15 @@
 # ==================================================
 server:
   port: 9102
+#  servlet:
+#    context-path: /eureka
 
 # ==================================================
 # SPRING
 # ==================================================
 spring:
+  application:
+    name: saigneur-discovery
   cloud:
     config:
       import-check:
@@ -17,11 +21,18 @@ spring:
 # EUREKA
 # ==================================================
 eureka:
-  instance:
-    hostname: localhost
   client:
-    registerWithEureka: false
-    fetchRegistry: false
+    fetch-registry: false
+    register-with-eureka: false
     serviceUrl:
-      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+      defaultZone: http://localhost:9102/eureka/
+
+# ==================================================
+# MANAGEMENT
+# ==================================================
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh
 

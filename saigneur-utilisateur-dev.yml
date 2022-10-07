@@ -1,0 +1,51 @@
+# ==================================================
+# SERVER
+# ==================================================
+server:
+  port: 9002
+  error:
+    include-message: always
+
+# ==================================================
+# SPRING
+# ==================================================
+spring:
+  cloud:
+    config:
+      import-check:
+        enabled: false
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  jpa:
+    open-in-view: false
+
+# ==================================================
+# EUREKA
+# ==================================================
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:9102/eureka/
+
+# ==================================================
+# MANAGEMENT
+# ==================================================
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh
+
+
+
+#spring:
+#  cloud:
+#    loadbalancer:
+#      cache:
+#        caffeine:
+#          spec: initialCapacity=50,maximumSize=500,expireAfterWrite=5s,refreshAfterWrite=7s
+#spring:
+#  cache:
+#    caffeine:
+#      spec: initialCapacity=50,maximumSize=500,expireAfterWrite=5s,refreshAfterWrite=7s

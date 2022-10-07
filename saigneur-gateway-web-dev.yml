@@ -2,7 +2,7 @@
 # SERVER
 # ==================================================
 server:
-  port: 9004
+  port: 9001
   error:
     include-message: always
 
@@ -10,6 +10,8 @@ server:
 # SPRING
 # ==================================================
 spring:
+  application:
+    name: saigneur-gateway-web
   cloud:
     config:
       import-check:

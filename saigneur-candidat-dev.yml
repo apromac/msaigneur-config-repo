@@ -10,6 +10,8 @@ server:
 # SPRING
 # ==================================================
 spring:
+  application:
+    name: saigneur-candidat
   cloud:
     config:
       import-check:
@@ -24,14 +26,9 @@ spring:
 # EUREKA
 # ==================================================
 eureka:
-  instance:
-    hostname: 78.138.45.243
-    port: 9102
-    preferIpAddress: true
-    lease-renewal-interval-in-seconds: 30
   client:
     serviceUrl:
-      defaultZone: http://${eureka.instance.hostname}:${eureka.instance.port}/eureka/
+      defaultZone: http://localhost:9102/eureka/
 
 # ==================================================
 # MANAGEMENT
