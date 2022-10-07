@@ -1,0 +1,37 @@
+# ==================================================
+# SERVER
+# ==================================================
+server:
+  port: 9004
+
+# ==================================================
+# SPRING
+# ==================================================
+spring:
+  cloud:
+    config:
+      import-check:
+        enabled: false
+
+# ==================================================
+# EUREKA
+# ==================================================
+eureka:
+  instance:
+    hostname: 78.138.45.243
+    port: 9102
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${eureka.instance.port}/eureka/
+
+# ==================================================
+# MANAGEMENT
+# ==================================================
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh
+
