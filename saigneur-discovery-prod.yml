@@ -10,6 +10,8 @@ server:
 # SPRING
 # ==================================================
 spring:
+  application:
+    name: saigneur-discovery
   cloud:
     config:
       import-check:
