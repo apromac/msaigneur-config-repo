@@ -28,7 +28,7 @@ eureka:
     hostname: 78.138.45.243
     port: 9102
   client:
-    service-url:
+    serviceUrl:
       defaultZone: http://${eureka.instance.hostname}:${eureka.instance.port}/eureka/
 
 # ==================================================
