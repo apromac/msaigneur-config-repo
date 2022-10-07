@@ -19,13 +19,12 @@ spring:
 eureka:
   instance:
     hostname: 78.138.45.243
-#    port: 9102
+    port: 9102
   client:
     registerWithEureka: false
     fetchRegistry: false
     serviceUrl:
-#      defaultZone: http://${eureka.instance.hostname}:${eureka.instance.port}/eureka/
-      defaultZone: http://${eureka.instance.hostname}:9102/eureka/
+      defaultZone: http://${eureka.instance.hostname}:${eureka.instance.port}/eureka/
 
 # ==================================================
 # MANAGEMENT
@@ -36,3 +35,15 @@ management:
       exposure:
         include: refresh
 
+
+
+#spring:
+#  cloud:
+#    loadbalancer:
+#      cache:
+#        caffeine:
+#          spec: initialCapacity=50,maximumSize=500,expireAfterWrite=5s,refreshAfterWrite=7s
+#spring:
+#  cache:
+#    caffeine:
+#      spec: initialCapacity=50,maximumSize=500,expireAfterWrite=5s,refreshAfterWrite=7s
