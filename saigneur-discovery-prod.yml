@@ -17,13 +17,13 @@ spring:
 # EUREKA
 # ==================================================
 eureka:
-  instance:
-    hostname: 78.138.45.243
+#  instance:
+#    hostname: 78.138.45.243
   client:
     registerWithEureka: false
     fetchRegistry: false
-    serviceUrl:
-      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+#    serviceUrl:
+#      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
 
 # ==================================================
 # MANAGEMENT
