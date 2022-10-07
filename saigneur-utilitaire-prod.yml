@@ -3,11 +3,16 @@
 # ==================================================
 server:
   port: 9004
+  error:
+    include-message: always
 
 # ==================================================
 # SPRING
 # ==================================================
 spring:
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
   cloud:
     config:
       import-check:
@@ -21,8 +26,6 @@ eureka:
     hostname: 78.138.45.243
 #    port: 9102
   client:
-    registerWithEureka: false
-    fetchRegistry: false
     serviceUrl:
 #      defaultZone: http://${eureka.instance.hostname}:${eureka.instance.port}/eureka/
       defaultZone: http://78.138.45.243:9102/eureka/
