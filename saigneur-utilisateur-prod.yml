@@ -3,6 +3,8 @@
 # ==================================================
 server:
   port: 9002
+  error:
+    include-message: always
 
 # ==================================================
 # SPRING
@@ -15,6 +17,8 @@ spring:
   mvc:
     pathmatch:
       matching-strategy: ant_path_matcher
+  jpa:
+    open-in-view: false
 
 # ==================================================
 # EUREKA
@@ -24,8 +28,6 @@ eureka:
     hostname: 78.138.45.243
     port: 9102
   client:
-    registerWithEureka: false
-    fetchRegistry: false
     serviceUrl:
       defaultZone: http://${eureka.instance.hostname}:${eureka.instance.port}/eureka/
 
@@ -38,3 +40,15 @@ management:
       exposure:
         include: refresh
 
+
+
+#spring:
+#  cloud:
+#    loadbalancer:
+#      cache:
+#        caffeine:
+#          spec: initialCapacity=50,maximumSize=500,expireAfterWrite=5s,refreshAfterWrite=7s
+#spring:
+#  cache:
+#    caffeine:
+#      spec: initialCapacity=50,maximumSize=500,expireAfterWrite=5s,refreshAfterWrite=7s
