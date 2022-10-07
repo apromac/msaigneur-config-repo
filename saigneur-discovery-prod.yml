@@ -3,6 +3,8 @@
 # ==================================================
 server:
   port: 9102
+  servlet:
+    context-path: /eureka
 
 # ==================================================
 # SPRING
@@ -20,10 +22,10 @@ eureka:
   instance:
     hostname: 78.138.45.243
   client:
-    register-with-eureka: false
     fetch-registry: false
-    service-url:
-      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+    register-with-eureka: false
+#    service-url:
+#      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
 
 # ==================================================
 # MANAGEMENT

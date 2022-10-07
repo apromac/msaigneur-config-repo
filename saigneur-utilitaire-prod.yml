@@ -26,10 +26,9 @@ spring:
 eureka:
   instance:
     hostname: 78.138.45.243
-    port: 9102
   client:
     serviceUrl:
-      defaultZone: http://${eureka.instance.hostname}:${eureka.instance.port}/eureka/
+      defaultZone: http://${eureka.instance.hostname}:9102/eureka/
 
 # ==================================================
 # MANAGEMENT
