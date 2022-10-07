@@ -26,11 +26,6 @@ spring:
 # EUREKA
 # ==================================================
 eureka:
-#  instance:
-#    hostname: 78.138.45.243
-#    port: 9102
-#    preferIpAddress: true
-#    lease-renewal-interval-in-seconds: 30
   client:
     serviceUrl:
       defaultZone: http://78.138.45.243:9102/eureka/
