@@ -18,21 +18,18 @@ spring:
         enabled: false
     gateway:
       routes:
-        - id: saigneur-utilisateur
-          uri: http://78.138.45.243:9002
-#          uri: lb://saigneur-utilisateur
-          predicates:
-            - Path=/msaigneur-candidat/**
-        - id: saigneur-candidat
-            uri: http://78.138.45.243:9003
-#            uri: lb://saigneur-candidat
-            predicates:
-              - Path=/msaigneur-candidat/**
-        - id: saigneur-utilitaire
-            uri: http://78.138.45.243:9004
-#            uri: lb://saigneur-utilitaire
-            predicates:
-              - Path=/msaigneur-utilitaire/**
+      - id: saigneur-utilisateur
+        uri: http://78.138.45.243:9002
+        predicates:
+        - Path=/msaigneur-candidat/**
+      - id: saigneur-candidat
+        uri: http://78.138.45.243:9003
+        predicates:
+        - Path=/msaigneur-candidat/**
+      - id: saigneur-utilitaire
+        uri: http://78.138.45.243:9004
+        predicates:
+        - Path=/msaigneur-utilitaire/**
   mvc:
     pathmatch:
       matching-strategy: ant_path_matcher
