@@ -22,20 +22,20 @@ spring:
         uri: http://78.138.45.243:9002
         predicates:
         - Path=/msaigneur-utilisateur/**
-        filters:
-        - RewritePath=/msaigneur-utilisateur/(?<path>.*), /$\{path}
-      - id: saigneur-candidat
-        uri: http://78.138.45.243:9003
-        predicates:
-        - Path=/msaigneur-candidat/**
-        filters:
-        - RewritePath=/msaigneur-candidat/(?<path>.*), /$\{path}
-      - id: saigneur-utilitaire
-        uri: http://78.138.45.243:9004
-        predicates:
-        - Path=/msaigneur-utilitaire/**
-        filters:
-        - RewritePath=/msaigneur-utilitaire/(?<path>.*), /$\{path}
+#        filters:
+#        - RewritePath=/msaigneur-utilisateur/(?<path>.*), /$\{path}
+#      - id: saigneur-candidat
+#        uri: http://78.138.45.243:9003
+#        predicates:
+#        - Path=/msaigneur-candidat/**
+#        filters:
+#        - RewritePath=/msaigneur-candidat/(?<path>.*), /$\{path}
+#      - id: saigneur-utilitaire
+#        uri: http://78.138.45.243:9004
+#        predicates:
+#        - Path=/msaigneur-utilitaire/**
+#        filters:
+#        - RewritePath=/msaigneur-utilitaire/(?<path>.*), /$\{path}
   mvc:
     pathmatch:
       matching-strategy: ant_path_matcher
