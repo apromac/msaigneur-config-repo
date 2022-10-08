@@ -18,10 +18,10 @@ spring:
         enabled: false
     gateway:
       routes:
-      - id: saigneur-utilisateur
-        uri: 'http://78.138.45.243:9002'
-        predicates:
-        - Path=/msaigneur-utilisateur/**
+        - id: saigneur-utilisateur
+          uri: 'http://78.138.45.243:9002'
+          predicates:
+            - Path=/msaigneur-utilisateur/**
 #        filters:
 #        - RewritePath=/msaigneur-utilisateur/(?<path>.*), /$\{path}
 #      - id: saigneur-candidat
