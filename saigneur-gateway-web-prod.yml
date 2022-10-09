@@ -60,10 +60,14 @@ eureka:
 # MANAGEMENT
 # ==================================================
 management:
+  endpoint:
+    gateway:
+      enabled: true
   endpoints:
     web:
       exposure:
-        include: "*"
+        include: gateway
+#        include: "*"
 #        include: refresh
 
 
