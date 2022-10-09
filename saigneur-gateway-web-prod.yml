@@ -29,9 +29,9 @@ spring:
         - id: saigneur-utilisateur
           uri: lb://saigneur-utilisateur
           predicates:
-            - Path=/utilisateur/**
-#          filters:
-#            - RewritePath=/msaigneur-utilisateur/(?<path>.*), /$\{path}
+            - Path=/saigneur-utilisateur/**
+          filters:
+            - RewritePath=/saigneur-utilisateur/(?<path>.*), /$\{path}
 
 #          uri: http://78.138.45.243:9002
 
@@ -66,8 +66,8 @@ management:
   endpoints:
     web:
       exposure:
-        include: gateway
-#        include: "*"
+#        include: gateway
+        include: "*"
 #        include: refresh
 
 
