@@ -29,7 +29,7 @@ spring:
         - id: saigneur-utilisateur
           uri: http://78.138.45.243:9002
           predicates:
-            - Path=/saigneur-utilisateur/**
+            - Path=/saigneur-utilisateur/api/v1/**
 
 
 #        - id: saigneur-utilisateur
