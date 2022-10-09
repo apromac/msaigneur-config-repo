@@ -27,11 +27,17 @@ spring:
           enabled: true
       routes:
         - id: saigneur-utilisateur
-          uri: lb://saigneur-utilisateur
+          uri: http://78.138.45.243:9002
           predicates:
             - Path=/saigneur-utilisateur/**
-          filters:
-            - RewritePath=/saigneur-utilisateur/(?<path>.*), /$\{path}
+
+
+#        - id: saigneur-utilisateur
+#          uri: lb://saigneur-utilisateur
+#          predicates:
+#            - Path=/saigneur-utilisateur/**
+#          filters:
+#            - RewritePath=/saigneur-utilisateur/(?<path>.*), /$\{path}
 
 #          uri: http://78.138.45.243:9002
 
