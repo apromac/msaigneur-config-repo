@@ -21,12 +21,12 @@ spring:
     config:
       import-check:
         enabled: false
-#    gateway:
-#      routes:
-#        - id: saigneur-utilisateur
-#          uri: http://78.138.45.243:9002
-#          predicates:
-#            - Path=/msaigneur-utilisateur/**
+    gateway:
+      routes:
+        - id: saigneur-utilisateur
+          uri: http://78.138.45.243:9002
+          predicates:
+            - Path=/msaigneur-utilisateur/**
 #          filters:
 #            - RewritePath=/msaigneur-utilisateur/(?<path>.*), /$\{path}
 
