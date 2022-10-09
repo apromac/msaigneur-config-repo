@@ -22,7 +22,7 @@ spring:
 # ==================================================
 eureka:
   instance:
-    hostname: http://78.138.45.243
+    hostname: http://78.138.45.243:9102
   client:
     fetch-registry: false
     register-with-eureka: false
