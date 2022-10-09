@@ -12,16 +12,21 @@ server:
 spring:
   application:
     name: saigneur-gateway-web
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  jpa:
+    open-in-view: false
   cloud:
     config:
       import-check:
         enabled: false
-    gateway:
-      routes:
-        - id: saigneur-utilisateur
-          uri: http://78.138.45.243:9002
-          predicates:
-            - Path=/msaigneur-utilisateur/**
+#    gateway:
+#      routes:
+#        - id: saigneur-utilisateur
+#          uri: http://78.138.45.243:9002
+#          predicates:
+#            - Path=/msaigneur-utilisateur/**
 #          filters:
 #            - RewritePath=/msaigneur-utilisateur/(?<path>.*), /$\{path}
 
@@ -38,11 +43,6 @@ spring:
 #        - Path=/msaigneur-utilitaire/**
 #        filters:
 #        - RewritePath=/msaigneur-utilitaire/(?<path>.*), /$\{path}
-  mvc:
-    pathmatch:
-      matching-strategy: ant_path_matcher
-  jpa:
-    open-in-view: false
 
 # ==================================================
 # EUREKA

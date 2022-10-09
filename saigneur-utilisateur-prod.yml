@@ -10,15 +10,17 @@ server:
 # SPRING
 # ==================================================
 spring:
-  cloud:
-    config:
-      import-check:
-        enabled: false
+  application:
+    name: saigneur-utilisateur
   mvc:
     pathmatch:
       matching-strategy: ant_path_matcher
   jpa:
     open-in-view: false
+  cloud:
+    config:
+      import-check:
+        enabled: false
 
 # ==================================================
 # EUREKA
