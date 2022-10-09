@@ -10,8 +10,8 @@ server:
 # SPRING
 # ==================================================
 spring:
-  application:
-    name: saigneur-candidat
+#  application:
+#    name: saigneur-candidat
   cloud:
     config:
       import-check:
