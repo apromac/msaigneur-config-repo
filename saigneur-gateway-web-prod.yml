@@ -27,7 +27,7 @@ spring:
           enabled: true
       routes:
         - id: saigneur-utilisateur
-          uri: http://78.138.45.243:9002
+          uri: lb://saigneur-utilisateur
           predicates:
             - Path=/saigneur-utilisateur/**
           filters:
