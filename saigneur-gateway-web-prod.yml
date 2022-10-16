@@ -26,10 +26,10 @@ spring:
         locator:
           enabled: true
       routes:
-        - id: saigneur-utilisateur
-          uri: http://78.138.45.243:9002/
+        - id: saigneur-candidat
+          uri: http://78.138.45.243:9003/
           predicates:
-            - Path=/saigneur-utilisateur/api/v1/**
+            - Path=/saigneur-candidat/api/v1/**
 
 
 #        - id: saigneur-utilisateur
