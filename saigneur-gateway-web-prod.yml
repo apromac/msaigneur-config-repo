@@ -30,6 +30,8 @@ spring:
           uri: http://78.138.45.243:9003/
           predicates:
             - Path=/saigneur-candidat/api/v1/**
+          filters:
+            - StripPrefix=1
 
 
 #        - id: saigneur-utilisateur
