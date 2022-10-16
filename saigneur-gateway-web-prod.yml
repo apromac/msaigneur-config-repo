@@ -30,8 +30,10 @@ spring:
           uri: http://78.138.45.243:9003
           predicates:
             - Path=/msaigneur-candidat/**
+#          filters:
+#            - StripPrefix=1
           filters:
-            - StripPrefix=1
+            - RewritePath=/msaigneur-candidat/(?<path>.*), /$\{path}
 
 
 #        - id: saigneur-utilisateur
