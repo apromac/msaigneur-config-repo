@@ -26,15 +26,28 @@ spring:
         locator:
           enabled: true
       routes:
+        - id: saigneur-utilisateur
+          uri: lb://saigneur-utilisateur
+          predicates:
+            - Path=/msaigneur-utilisateur/**
+          filters:
+            - RewritePath=/msaigneur-utilisateur/(?<path>.*), /$\{path}
         - id: saigneur-candidat
-          uri: http://78.138.45.243:9003
+          uri: lb://saigneur-candidat
           predicates:
             - Path=/msaigneur-candidat/**
-#          filters:
-#            - StripPrefix=1
           filters:
             - RewritePath=/msaigneur-candidat/(?<path>.*), /$\{path}
+        - id: saigneur-utilitaire
+          uri: lb://saigneur-utilitaire
+          predicates:
+            - Path=/msaigneur-utilitaire/**
+          filters:
+            - RewritePath=/msaigneur-utilitaire/(?<path>.*), /$\{path}
 
+
+#          filters:
+#            - StripPrefix=1
 
 #        - id: saigneur-utilisateur
 #          uri: lb://saigneur-utilisateur
