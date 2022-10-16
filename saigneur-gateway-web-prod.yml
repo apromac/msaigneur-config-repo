@@ -45,32 +45,6 @@ spring:
           filters:
             - RewritePath=/msaigneur-utilitaire/(?<path>.*), /$\{path}
 
-
-#          filters:
-#            - StripPrefix=1
-
-#        - id: saigneur-utilisateur
-#          uri: lb://saigneur-utilisateur
-#          predicates:
-#            - Path=/saigneur-utilisateur/**
-#          filters:
-#            - RewritePath=/saigneur-utilisateur/(?<path>.*), /$\{path}
-
-#          uri: http://78.138.45.243:9002
-
-#      - id: saigneur-candidat
-#        uri: http://78.138.45.243:9003
-#        predicates:
-#        - Path=/msaigneur-candidat/**
-#        filters:
-#        - RewritePath=/msaigneur-candidat/(?<path>.*), /$\{path}
-#      - id: saigneur-utilitaire
-#        uri: http://78.138.45.243:9004
-#        predicates:
-#        - Path=/msaigneur-utilitaire/**
-#        filters:
-#        - RewritePath=/msaigneur-utilitaire/(?<path>.*), /$\{path}
-
 # ==================================================
 # EUREKA
 # ==================================================
