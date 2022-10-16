@@ -14,7 +14,8 @@ spring:
     name: saigneur-candidat
   mvc:
     pathmatch:
-      matching-strategy: ant_path_matcher
+#      matching-strategy: ant_path_matcher
+      matching-strategy: path-pattern-parser
   jpa:
     open-in-view: false
   cloud:
