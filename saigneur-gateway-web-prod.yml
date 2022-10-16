@@ -79,6 +79,14 @@ eureka:
     service-url:
       defaultZone: http://78.138.45.243:9102/eureka/
 
+## ==================================================
+## LOGGING
+## ==================================================
+#logging:
+#  level:
+#    org.springframework.cloud.gateway: DEBUG
+#    reactor.netty.http.client: DEBUG
+
 # ==================================================
 # MANAGEMENT
 # ==================================================
