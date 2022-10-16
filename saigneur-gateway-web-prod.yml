@@ -27,9 +27,9 @@ spring:
           enabled: true
       routes:
         - id: saigneur-candidat
-          uri: http://78.138.45.243:9003/
+          uri: lb://saigneur-candidat
           predicates:
-            - Path=/saigneur-candidat/api/v1/**
+            - Path=/msaigneur-candidat/**
           filters:
             - StripPrefix=1
 
@@ -61,7 +61,7 @@ spring:
 # ==================================================
 eureka:
   client:
-    serviceUrl:
+    service-url:
       defaultZone: http://78.138.45.243:9102/eureka/
 
 # ==================================================
