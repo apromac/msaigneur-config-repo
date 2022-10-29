@@ -37,7 +37,7 @@ eureka:
 #  endpoints:
 #    web:
 #      exposure:
-#        include: refresh
+#        include: *
 
 
 
