@@ -64,6 +64,12 @@ eureka:
 # ==================================================
 # MANAGEMENT
 # ==================================================
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
 #management:
 #  endpoint:
 #    gateway:
