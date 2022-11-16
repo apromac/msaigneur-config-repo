@@ -27,8 +27,22 @@ spring:
 # ==================================================
 eureka:
   client:
+    # To register to the eureka server
+    register-with-eureka: true
+    # To fetch the registry from the eureka server
+    fetchRegistry: true
     service-url:
       defaultZone: http://78.138.45.243:9102/eureka/
+
+  instance:
+    # The instance hostname
+    hostname: 78.138.45.243
+    # The instance unique id
+    instanceId: ${eureka.instance.hostname}:${spring.application.name}
+    # A bench of health information end-points provided by eureka
+    statusPageUrl: http://${eureka.hostname}/
+    healthCheckUrl: http://${eureka.hostname}/actuator/health
+    secureHealthCheckUrl: http://${eureka.hostname}/actuator/health
 
 # ==================================================
 # MANAGEMENT
