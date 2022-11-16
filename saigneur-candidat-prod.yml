@@ -36,7 +36,7 @@ eureka:
 
   instance:
     # The instance hostname
-    hostname: 78.138.45.243
+    hostname: 78.138.45.243:9102
     # The instance unique id
     instanceId: ${eureka.instance.hostname}:${spring.application.name}
     # A bench of health information end-points provided by eureka
