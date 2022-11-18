@@ -47,11 +47,11 @@ eureka:
 # ==================================================
 # MANAGEMENT
 # ==================================================
-#management:
-#  endpoints:
-#    web:
-#      exposure:
-#        include: refresh
+management:
+  endpoints:
+    web:
+      exposure:
+        include: *
 
 
 
